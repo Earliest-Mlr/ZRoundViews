@@ -217,6 +217,15 @@ public class RoundRelativeLayout extends RelativeLayout {
     }
 
     /**
+     * 设置左上角半径
+     * @param radiusLeftTop 左上角半径(单位dp)
+     */
+    public void setRadiusLeftTop(float radiusLeftTop) {
+        this.radiusLeftTop = dp2px(radiusLeftTop);
+        setBackground();
+    }
+
+    /**
      * 设置左下角半径
      * @param radiusLeftBottom 左下角半径(单位dp)
      */
