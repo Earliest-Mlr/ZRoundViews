@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="backColor" format="reference|color"/>
+    <attr name="endColor" format="reference|color"/>
+    <attr name="startColor" format="reference|color"/>
+    <attr name="borderWidth" format="dimension"/>
+    <attr name="borderColor" format="reference|color"/>
+    <attr name="downColor" format="reference|color"/>
+    <attr name="isRadius" format="boolean"/>
+    <attr name="radius" format="dimension"/>
+    <attr name="radiusLeftTop" format="dimension"/>
+    <attr name="radiusLeftBottom" format="dimension"/>
+    <attr name="radiusRightTop" format="dimension"/>
+    <attr name="radiusRightBottom" format="dimension"/>
+    <attr name="gradientType">
+        <enum name="top_bottom" value="0"/>
+        <enum name="tr_bl" value="1"/>
+        <enum name="right_left" value="2"/>
+        <enum name="br_tl" value="3"/>
+        <enum name="bottom_top" value="4"/>
+        <enum name="bl_tr" value="5"/>
+        <enum name="left_right" value="6"/>
+        <enum name="tl_br" value="7"/>
+    </attr>
+
+    <declare-styleable name="RoundRelativeLayout">
+        <attr name="backColor"/>
+        <attr name="endColor"/>
+        <attr name="startColor"/>
+        <attr name="borderWidth"/>
+        <attr name="borderColor"/>
+        <attr name="downColor"/>
+        <attr name="isRadius"/>
+        <attr name="radius"/>
+        <attr name="radiusLeftTop"/>
+        <attr name="radiusLeftBottom"/>
+        <attr name="radiusRightTop"/>
+        <attr name="radiusRightBottom"/>
+        <attr name="gradientType"/>
+    </declare-styleable>
+
+    <declare-styleable name="RoundLinearLayout">
+        <attr name="backColor"/>
+        <attr name="endColor"/>
+        <attr name="startColor"/>
+        <attr name="borderWidth"/>
+        <attr name="borderColor"/>
+        <attr name="downColor"/>
+        <attr name="isRadius"/>
+        <attr name="radius"/>
+        <attr name="radiusLeftTop"/>
+        <attr name="radiusLeftBottom"/>
+        <attr name="radiusRightTop"/>
+        <attr name="radiusRightBottom"/>
+        <attr name="gradientType"/>
+    </declare-styleable>
+
+    <declare-styleable name="RoundTextView">
+        <attr name="backColor"/>
+        <attr name="endColor"/>
+        <attr name="startColor"/>
+        <attr name="borderWidth"/>
+        <attr name="borderColor"/>
+        <attr name="downColor"/>
+        <attr name="isRadius"/>
+        <attr name="radius"/>
+        <attr name="radiusLeftTop"/>
+        <attr name="radiusLeftBottom"/>
+        <attr name="radiusRightTop"/>
+        <attr name="radiusRightBottom"/>
+        <attr name="gradientType"/>
+    </declare-styleable>
+</resources>
