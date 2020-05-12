@@ -91,11 +91,9 @@ public class RoundTextView extends AppCompatTextView {
             case MotionEvent.ACTION_UP:
                 isDown = false;
                 break;
-            case MotionEvent.ACTION_MOVE:
-                return super.onTouchEvent(event);
         }
         setBackground();
-        return true;
+        return super.onTouchEvent(event);
     }
 
     /**
