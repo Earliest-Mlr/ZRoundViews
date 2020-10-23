@@ -14,7 +14,7 @@ import android.widget.LinearLayout;
 public class RoundLinearLayout extends LinearLayout {
     private int backColor, endColor, startColor, borderColor, borderWidth, downColor, gradientType;
     private float radius, radiusLeftTop, radiusLeftBottom, radiusRightTop, radiusRightBottom;
-    private boolean isDown = false, isRadius;
+    private boolean isDown, isRadius;
 
     public RoundLinearLayout(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
@@ -29,6 +29,7 @@ public class RoundLinearLayout extends LinearLayout {
         downColor = typedArray.getColor(R.styleable.RoundLinearLayout_downColor, Color.TRANSPARENT);
         radius = typedArray.getDimension(R.styleable.RoundLinearLayout_radius, 0);
         isRadius = typedArray.getBoolean(R.styleable.RoundTextView_isRadius, false);
+        isDown = typedArray.getBoolean(R.styleable.RoundTextView_isDown, false);
         radiusLeftTop = typedArray.getDimension(R.styleable.RoundLinearLayout_radiusLeftTop, 0);
         radiusLeftBottom = typedArray.getDimension(R.styleable.RoundLinearLayout_radiusLeftBottom, 0);
         radiusRightTop = typedArray.getDimension(R.styleable.RoundLinearLayout_radiusRightTop, 0);
@@ -248,6 +249,15 @@ public class RoundLinearLayout extends LinearLayout {
      */
     public void setRadiusRightBottom(float radiusRightBottom) {
         this.radiusRightBottom = dp2px(radiusRightBottom);
+        setBackground();
+    }
+
+    /**
+     * 设置初始是否显示按下时的颜色
+     * @param isDown
+     */
+    public void setIsDown(boolean isDown){
+        this.isDown = isDown;
         setBackground();
     }
 

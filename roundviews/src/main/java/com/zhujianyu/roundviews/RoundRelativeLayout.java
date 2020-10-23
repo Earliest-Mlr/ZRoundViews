@@ -13,7 +13,7 @@ import android.widget.RelativeLayout;
 public class RoundRelativeLayout extends RelativeLayout {
     private int backColor, endColor, startColor, borderColor, borderWidth, downColor, gradientType;
     private float radius, radiusLeftTop, radiusLeftBottom, radiusRightTop, radiusRightBottom;
-    private boolean isDown = false, isRadius;
+    private boolean isDown, isRadius;
 
     public RoundRelativeLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -28,6 +28,7 @@ public class RoundRelativeLayout extends RelativeLayout {
         downColor = typedArray.getColor(R.styleable.RoundRelativeLayout_downColor, Color.TRANSPARENT);
         radius = typedArray.getDimension(R.styleable.RoundRelativeLayout_radius, 0);
         isRadius = typedArray.getBoolean(R.styleable.RoundTextView_isRadius, false);
+        isDown = typedArray.getBoolean(R.styleable.RoundTextView_isDown, false);
         radiusLeftTop = typedArray.getDimension(R.styleable.RoundRelativeLayout_radiusLeftTop, 0);
         radiusLeftBottom = typedArray.getDimension(R.styleable.RoundRelativeLayout_radiusLeftBottom, 0);
         radiusRightTop = typedArray.getDimension(R.styleable.RoundRelativeLayout_radiusRightTop, 0);
@@ -247,6 +248,15 @@ public class RoundRelativeLayout extends RelativeLayout {
      */
     public void setRadiusRightBottom(float radiusRightBottom) {
         this.radiusRightBottom = dp2px(radiusRightBottom);
+        setBackground();
+    }
+
+    /**
+     * 设置初始是否显示按下时的颜色
+     * @param isDown
+     */
+    public void setIsDown(boolean isDown){
+        this.isDown = isDown;
         setBackground();
     }
 

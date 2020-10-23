@@ -7,6 +7,7 @@
     <attr name="borderColor" format="reference|color"/>
     <attr name="downColor" format="reference|color"/>
     <attr name="isRadius" format="boolean"/>
+    <attr name="isDown" format="boolean"/>
     <attr name="radius" format="dimension"/>
     <attr name="radiusLeftTop" format="dimension"/>
     <attr name="radiusLeftBottom" format="dimension"/>
@@ -31,6 +32,7 @@
         <attr name="borderColor"/>
         <attr name="downColor"/>
         <attr name="isRadius"/>
+        <attr name="isDown"/>
         <attr name="radius"/>
         <attr name="radiusLeftTop"/>
         <attr name="radiusLeftBottom"/>
@@ -47,6 +49,7 @@
         <attr name="borderColor"/>
         <attr name="downColor"/>
         <attr name="isRadius"/>
+        <attr name="isDown"/>
         <attr name="radius"/>
         <attr name="radiusLeftTop"/>
         <attr name="radiusLeftBottom"/>
@@ -63,6 +66,7 @@
         <attr name="borderColor"/>
         <attr name="downColor"/>
         <attr name="isRadius"/>
+        <attr name="isDown"/>
         <attr name="radius"/>
         <attr name="radiusLeftTop"/>
         <attr name="radiusLeftBottom"/>

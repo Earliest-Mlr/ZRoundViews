@@ -14,8 +14,7 @@ import android.view.MotionEvent;
 public class RoundTextView extends AppCompatTextView {
     private int backColor, endColor, startColor, borderColor, borderWidth, downColor, gradientType;
     private float radius, radiusLeftTop, radiusLeftBottom, radiusRightTop, radiusRightBottom;
-    private boolean isDown = false, isRadius;
-    private int w, h;
+    private boolean isDown, isRadius;
 
     public RoundTextView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
@@ -30,6 +29,7 @@ public class RoundTextView extends AppCompatTextView {
         downColor = typedArray.getColor(R.styleable.RoundTextView_downColor, Color.TRANSPARENT);
         radius = typedArray.getDimension(R.styleable.RoundTextView_radius, 0);
         isRadius = typedArray.getBoolean(R.styleable.RoundTextView_isRadius, false);
+        isDown = typedArray.getBoolean(R.styleable.RoundTextView_isDown, false);
         radiusLeftTop = typedArray.getDimension(R.styleable.RoundTextView_radiusLeftTop, 0);
         radiusLeftBottom = typedArray.getDimension(R.styleable.RoundTextView_radiusLeftBottom, 0);
         radiusRightTop = typedArray.getDimension(R.styleable.RoundTextView_radiusRightTop, 0);
@@ -249,6 +249,15 @@ public class RoundTextView extends AppCompatTextView {
      */
     public void setRadiusRightBottom(float radiusRightBottom) {
         this.radiusRightBottom = dp2px(radiusRightBottom);
+        setBackground();
+    }
+
+    /**
+     * 设置初始是否显示按下时的颜色
+     * @param isDown
+     */
+    public void setIsDown(boolean isDown){
+        this.isDown = isDown;
         setBackground();
     }
 
