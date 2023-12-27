@@ -87,7 +87,7 @@ public class RoundRelativeLayout extends RelativeLayout {
             case MotionEvent.ACTION_DOWN:
                 isDown = true;
                 break;
-            case MotionEvent.ACTION_UP:
+            default:
                 isDown = false;
                 break;
         }
